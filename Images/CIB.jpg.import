@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CIB.jpg-9485b2a75f54e10d477b256e6824f5ab.stex"
+path="res://.import/CIB.jpg-a513fd8c16700c18beb96011601153e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Modules/Y_grindingFloor/Images/CIB.jpg"
-dest_files=[ "res://.import/CIB.jpg-9485b2a75f54e10d477b256e6824f5ab.stex" ]
+source_file="res://Modules/Z_IgrindingFloor/Images/CIB.jpg"
+dest_files=[ "res://.import/CIB.jpg-a513fd8c16700c18beb96011601153e6.stex" ]
 
 [params]
 
