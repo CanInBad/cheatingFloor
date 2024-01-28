@@ -1,29 +1,26 @@
 extends EventBase
 
 func _init():
-	id = "cheatingFloorEntranceEnter"
+    id = "cheatingFloorEntranceEnter"
 
 func registerTriggers(es):
-	es.addTrigger(self, Trigger.EnteringRoom, "yard_deadend1")
+    es.addTrigger(self, Trigger.EnteringRoom, "yard_deadend1")
 
 func run(_triggerID, _args):
-	# if(!getFlag("FightClubModule.BulldogFirstTimeHappened")):
-	# 	addButtonUnlessLate("Bulldog", "Approach the guy", "bulldog")
-	# elif(!getFlag("FightClubModule.BulldogBypassed")):
-	# 	addButtonUnlessLate("Bulldog", "Approach the guy", "bulldogtalk")
-	# else:
-    addButton("The Underground", "Go down to the fight club", "fightclub")
+    if(getModuleFlag("grindingFloor","grindingFlDiscoveredHatch")):
+        saynn("There is a open hatch here with the label writting on underside of it: [b]Spawn Room[/b]")
+        addButton("The Hatch", "Go down the hatch", "enterHatch")
+    else:
+        saynn("Something caught your eye in the corner...")
+        addButton("Closer Look","Go take a closer look at the thing","closerLook")
 
 
 func getPriority():
-	return 0
+    return 0
 
 func onButton(_method, _args):
-	if(_method == "bulldog"):
-		runScene("BulldogFirstTimeScene")
-		setFlag("FightClubModule.BulldogFirstTimeHappened", true)
-	if(_method == "bulldogtalk"):
-		runScene("BulldogTalkScene")
-	if(_method == "fightclub"):
-		GM.pc.setLocation("custom_fight_entrance")
-		GM.main.reRun()
+    if _method == "closerLook":
+        runScene("discoverHatch")
+    if(_method == "enterHatch"):
+        GM.pc.setLocation("grinding_entrance")
+        GM.main.reRun()

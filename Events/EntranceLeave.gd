@@ -4,7 +4,7 @@ func _init():
 	id = "cheatingFloorEntranceLeave"
 
 func registerTriggers(es):
-	es.addTrigger(self, Trigger.EnteringRoom, "custom_fight_entrance")
+	es.addTrigger(self, Trigger.EnteringRoom, "grinding_entrance")
 
 func run(_triggerID, _args):
 	# if(!getFlag("FightClubModule.BulldogFirstTimeHappened")):
