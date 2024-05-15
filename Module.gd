@@ -21,6 +21,7 @@ func _init():
 		characters.append("res://Modules/Z_IgrindingFloor/CIBcharModded.gd")
 	else:
 		characters.append("res://Modules/Z_IgrindingFloor/CIBcharNonModded.gd")
+	GlobalRegistry.registerMapFloor("grindingFloor","res://Modules/Z_IgrindingFloor/Floor/grindingFloor.tscn")
 
 
 func checkMods(): # will return true if all mods present
