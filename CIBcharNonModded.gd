@@ -39,8 +39,8 @@ func _init():
 		DamageType.Stamina: 20,
 	}
 	npcRestraintStrugglePower = 1.5
-	npcRestraintMinigameResultMin = 0.9
-	npcRestraintMinigameResultMax = 1.3
+	# npcRestraintMinigameResultMin = 0.9
+	# npcRestraintMinigameResultMax = 1.3 # those aren't used anymore I supposed
 	npcBaseRestraintDodgeChanceMult = 0.5
 
 	npcLustInterests = {
